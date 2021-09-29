@@ -4,9 +4,27 @@
             Dashboard
         </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+        <link rel="stylesheet" href="css/style2.css">
     </head>
     <body>
-        <li><a href="/logout">LogOut</a></li>
+        <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+        </form>
         <h1>Hi <%=user %></h1>
+        <div class="item-container">
+            <div class="item">
+                <ul>
+                    <li>Name</li>
+                    <li>Title</li>
+                </ul>
+            </div>
+            <div class="item">
+                <ul>
+                    <li>Name</li>
+                    <li>Title</li>
+                </ul>
+            </div>
+        </div>
+        
     </body>
 </html>

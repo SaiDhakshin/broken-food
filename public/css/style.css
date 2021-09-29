@@ -1,0 +1,500 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'); */
+/* Roboto */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap'); */
+/* Roboto-Regular */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family:'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex ;  
+    align-items: center;
+    justify-content: center;
+}
+img { /*this will change all img settings */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    color:black; /*thhis will change all para color */
+    margin : 30px; /*margin added*/
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+/* batter Section */
+#batter{
+    background-image:url(/img/batter.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    
+}
+#batter::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:black;
+    opacity: .7;
+    z-index: -1; 
+}
+#batter .batter{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#batter h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color:transparent;
+    animation: text_reveal_blink .5s ease forwards;
+    animation-delay: 1s;
+}
+#batter h1:nth-child(1){
+    animation-delay: 1s;
+}
+#batter h1:nth-child(2){
+    animation-delay: 2s;
+}
+#batter h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+#batter h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+#batter h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#batter h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#batter h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+#batter .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color:white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size:  2rem;
+    text-transform: uppercase;
+    letter-spacing:  .1rem;
+    margin-top: 30px;
+    transition: .3s ease ;
+    transition-property: background-color, color;
+}
+#batter .cta:hover{
+    color: white;
+    background-color: crimson;
+}
+
+/*end batter Section */
+/*services section start */
+#services .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#services .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#services .section-title span{
+    color: turquoise;
+}
+#services .service-top p{
+    color:black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.4rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem; 
+}
+#services .service-bottom{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#services .service-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(/img/batter.png);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* this will change border cornor */
+}
+/*image insert diff services*/
+/*image insert diff services end*/
+
+#services .service-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+   /* background-color: black; */
+    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+    opacity: .8;
+    z-index: -1;
+}
+/*image theme set-up*/
+/*image theme set-up end*/
+#services .service-bottom .icon{ /*icon settings */
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+} 
+/*#services .service-bottom .img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}*/
+#services .service-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+/*#services .service-item p{
+    color: white;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+} para color change*/
+
+/*services section end */
+ 
+/*recent project */
+#projects .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#projects .section-title span{
+    color: turquoise;
+}
+#projects .projects{
+    flex-direction: column;
+    max-width: 1200px;
+    margin-bottom: 0 auto;
+    padding: 100px 0;
+}
+#projects .projects-header h1{
+    margin-bottom: 50px; /*recnt distancen */
+}
+#projects .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  /*  background-color: rgba(4, 233, 157, 0.555); para color only change */
+  background-image: linear-gradient(60deg,#308a73 0%,#39ad86 100%);
+  color: white;
+}
+#projects .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#projects .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#projects .project-info p{
+    color: whitesmoke;
+}
+#projects .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#projects .project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+   /* background-color: black; it will change only pic col*/
+   background-image: linear-gradient(60deg,#308a73 0%,#39ad86 100%);
+    opacity: .2;
+}
+#projects .project-img img{
+    transform: .2s ease transform;
+}
+#projects .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+
+/* recent project end */
+
+/*About Us started*/
+#about .section-tilte{
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#about .section-tilte span{
+    color: turquoise;
+}
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left{
+    width: 250px;
+    height: 360px;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom:10px;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+}
+#about .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color:blue;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size:  2rem;
+    text-transform: uppercase;
+    letter-spacing:  .1rem;
+    margin-top: 30px;
+    transition: .3s ease ;
+    transition-property: background-color, color;
+}
+#about .cta:hover{
+    color: white;
+    background-color: crimson;
+}
+#about .col-right .cta{
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#about .col-left .about-img{
+    position: relative;
+  /*this will make photo  width: 100%;
+    height: 100%; */
+    position: relative;
+    border: 10px solid white;
+}
+#about .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid chartreuse;
+    z-index: -1;
+}
+/*About us End */
+
+/*contact-us*/
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contact .section-tilte{
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#contact .section-tilte span{
+    color: turquoise;
+}
+#contact .contact-items{
+    width: 50%; /*chn=anged-width*/
+}
+#contact .contact-item{
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0  #0000002c;
+    transition: .3s ease box-shadow;
+}
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0  #0000002c;
+}
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+/*contact-us end*/
+
+
+/*footer start */
+#footer {
+    background-image: linear-gradient(60deg,#308a73 0%,#39ad86 100%);
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer .brand h1{
+    font-size: 4rem;
+    font-weight: 500;
+    color:rgb(189, 189, 189);
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+}
+#footer .brand h1 span{
+    color: rgba(4, 30, 114, 0.877);
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 50px;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
+#footer p{
+    color: azure;
+    font-size: 1.3rem;
+}
+/*footer end */
+
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal_blink{
+    100%{
+        color:white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color:crimson;
+        font-weight: 500;
+    }
+}
+
+
+/*media query for tableet */

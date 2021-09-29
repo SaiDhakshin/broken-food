@@ -1,4 +1,4 @@
-const pool = require('../util/database');
+const pool = require('../util/authdatabase');
 const passport = require('passport');
 var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 

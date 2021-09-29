@@ -8,6 +8,7 @@ const router = express.Router();
 
 const authController = require('../controllers/auth');
 const OAuthController = require('../controllers/OAuth');
+const productController = require('../controllers/products');
 
 function checkAuthenticated(req,res,next){
     if(req.isAuthenticated()){
@@ -48,6 +49,8 @@ function isLoggedIn(req,res,next){
 router.get("/dashboard",isLoggedIn ,authController.getDashboard);
 
 
-router.get("/logout",authController.getLogout);
+
+
+router.post("/logout",authController.postLogout);
 
 module.exports = router;

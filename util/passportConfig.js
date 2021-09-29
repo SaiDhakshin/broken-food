@@ -1,5 +1,7 @@
 const LocalStrategy = require('passport-local');
-const pool = require('../util/database');
+
+const pool = require('../util/authdatabase');
+
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 

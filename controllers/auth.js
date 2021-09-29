@@ -1,5 +1,6 @@
 const passport = require('passport');
 const bcrypt = require('bcrypt');
+const pool = require('../util/authdatabase');
 
 const intializePassport = require('../util/passportConfig');
 
@@ -11,7 +12,7 @@ exports.register = async (req,res) => {
     console.log(name , email , password , password2);
     let errors = [];
     if(!name || !email || !password || !password2){
-        errors.push({message : "Please enetr all fields!"});
+        errors.push({message : "Please enter all fields!"});
     }
     if(password.length < 6){
         errors.push({message : "Password length must be greater than 6"});
@@ -67,7 +68,11 @@ exports.getDashboard = (req,res) => {
     res.render("dashboard" , {user : req.user.displayname|| req.user.name});
 }
 
-exports.getLogout = (req,res) => {
+exports.postLogout = (req,res) => {
+    req.session.destroy(err=>{
+        console.log(err);
+    })
+    console.log("Logout Ran!");
     req.logOut();
     req.flash("success_msg","You are logged out");
     res.redirect("/");
